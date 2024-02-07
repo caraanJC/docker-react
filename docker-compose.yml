@@ -1,0 +1,13 @@
+version: "3"
+services:
+  frontend-react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["npm", "run", "test"]
